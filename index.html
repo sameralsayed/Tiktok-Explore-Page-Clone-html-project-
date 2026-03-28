@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore trending videos, hashtags, and creators on TikTok. Discover the best short-form video content.">
+    <meta name="keywords" content="TikTok, Explore, Trending, Videos, Short-form, Social Media">
+    <meta name="author" content="SAMER SAEID">
+    <title>Explore - TikTok</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+
+    <nav class="navbar navbar-expand-lg border-bottom border-dark fixed-top bg-black">
+        <div class="container-fluid px-3 px-md-4">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <svg width="118" height="42" viewBox="0 0 118 42" fill="white"><path d="M102.3 21.1c-1.3-.4-2.6-.6-4-.6-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8v-16.5c3.2 2.5 7.2 4 11.7 4v-7.3c-5.9 0-10.7-4.8-10.7-10.7h-5v23.1zM11 21.1C9.7 20.7 8.4 20.5 7 20.5c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8V5.4c3.2 2.5 7.2 4 11.7 4V2.1c-5.9 0-10.7-4.8-10.7-10.7h-5v29.7z"/></svg>
+            </a>
+            
+            <div class="search-box d-none d-md-flex mx-auto position-relative">
+                <input type="text" class="form-control rounded-pill bg-dark border-0 text-white px-4 py-2" placeholder="Search">
+                <button class="btn border-start border-secondary position-absolute end-0 top-50 translate-middle-y px-3 text-secondary">🔍</button>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-outline-light fw-bold d-none d-sm-block">+ Upload</button>
+                <button class="btn btn-danger fw-bold px-4 tt-red-bg">Log in</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid main-wrapper">
+        <div class="row">
+            <aside class="col-lg-3 d-none d-lg-block border-end border-dark sidebar-fixed">
+                <div class="nav flex-column gap-2 p-3">
+                    <a href="#" class="nav-link text-white active-link fs-5 fw-bold"><span class="me-3">🏠</span> For You</a>
+                    <a href="#" class="nav-link text-secondary fs-5 fw-bold"><span class="me-3">👥</span> Following</a>
+                    <a href="#" class="nav-link text-danger fs-5 fw-bold"><span class="me-3">🧭</span> Explore</a>
+                    <a href="#" class="nav-link text-secondary fs-5 fw-bold"><span class="me-3">🎥</span> LIVE</a>
+                </div>
+                <hr class="border-secondary mx-3">
+                <div class="p-3">
+                    <p class="text-secondary small">Log in to follow creators, like videos, and view comments.</p>
+                    <button class="btn btn-outline-danger w-100 fw-bold py-2">Log in</button>
+                </div>
+            </aside>
+
+            <main class="col-12 col-lg-9 content-scroll p-0">
+                <div class="sticky-tabs bg-black border-bottom border-dark px-4">
+                    <div class="d-flex gap-4 overflow-auto py-3 no-scrollbar" id="category-tabs">
+                        <span class="tab-item active" data-cat="all">All</span>
+                        <span class="tab-item" data-cat="singing">Singing</span>
+                        <span class="tab-item" data-cat="dancing">Dancing</span>
+                        <span class="tab-item" data-cat="comedy">Comedy</span>
+                        <span class="tab-item" data-cat="sports">Sports</span>
+                        <span class="tab-item" data-cat="anime">Anime</span>
+                        <span class="tab-item" data-cat="gaming">Gaming</span>
+                    </div>
+                </div>
+
+                <div class="container-fluid p-4">
+                    <div class="row g-3" id="explore-grid">
+                        </div>
+                </div>
+
+                <footer class="p-5 border-top border-dark text-center text-secondary">
+                    <p class="mb-1">Copyright SAMER SAEID. &copy; 2026</p>
+                    <p class="mb-0">SAMER SAEID Made by ♥️ <a href="https://bio.link/samer" target="_blank" class="text-white text-decoration-none fw-bold">Follow Me</a></p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
