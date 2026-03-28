@@ -1,0 +1,121 @@
+:root {
+    --tt-red: #FE2C55;
+    --tt-dark: #121212;
+    --tt-border: rgba(255, 255, 255, 0.12);
+}
+
+body {
+    font-family: 'Sofia Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow: hidden;
+}
+
+.tt-red-bg {
+    background-color: var(--tt-red) !important;
+    border: none;
+}
+
+.main-wrapper {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+}
+
+.sidebar-fixed {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.content-scroll {
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Category Tabs */
+.sticky-tabs {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.tab-item {
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+}
+
+.tab-item:hover, .tab-item.active {
+    color: #fff;
+}
+
+.tab-item.active {
+    position: relative;
+}
+
+.tab-item.active::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+/* Video Grid Cards */
+.video-card {
+    position: relative;
+    aspect-ratio: 3/4;
+    background-color: var(--tt-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.video-card:hover .video-thumb {
+    transform: scale(1.05);
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    display: flex;
+    flex-direction: column;
+}
+
+.view-count {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.creator-info {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .content-scroll {
+        height: auto;
+        overflow: visible;
+    }
+    body {
+        overflow: auto;
+    }
+}
